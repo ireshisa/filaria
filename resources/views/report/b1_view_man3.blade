@@ -1,0 +1,98 @@
+<page>
+    <!-- boostrap cdn limk -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- boostrap cdn limk -->
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            line-height: 18px;
+            align-items: center;
+            margin: auto auto;
+
+        }
+
+        th,
+        td {
+            position: relative;
+            padding: 1px;
+            align-items: center;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        .custom-table {
+            text-align: center;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        .tha {
+            -webkit-transform: rotate(-90deg);
+            -moz-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+            -o-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+            width: 95px;
+            text-align: center;
+        }
+
+        th:first-child {
+            height: 100px;
+        }
+    </style>
+    <div class="row" style="margin: 5px">
+        <div class="col float-left "><strong>Entomological survillance Report</strong><strong class="ml-3"> B1</strong>
+        </div>
+        <div class="col float-right">
+            <div class="float-right mr-4"> </div>
+        </div>
+    </div>
+    <h2 style="text-align: center; font-family:Arial; Arial; font-weight: bold;"> ANTI FILARIASIS UNIT/</h2>
+    <h3 style="text-align: center; font-family:Arial; font-weight: bold;">
+        <?php
+        print_r($district);
+        ?> <?php if($district != "CMC"){ echo " DISTRIC"; } ?> </h3>
+
+
+    <div class="row pb-0 mb-0" style="margin-left: 5px">
+        <div class="col float-left"><strong>From:  <?php print_r($from);?>......    To:   <?php print_r($to);?>......  </strong><strong class="ml-3"></strong></div>
+    </div>
+    <table class="mr-auto mt-5" style="margin-left: 5px">
+        <tr>
+            <th rowspan="2" style="padding: 5px">Name of <br> HEO</th>
+            <th colspan="3" style="padding: 5px">Area</th>
+           <th rowspan="2" style="padding: 5px">Form name</th>
+            <th colspan="3" style="padding: 5px">Premises</th>
+            <th class="tha" rowspan="2">Catch time(hr)</th>
+            <th class="tha" rowspan="2">Mosquito density (per man hr)</th>
+            <th colspan="4" style="padding: 5px">Mansonia</th>
+            <th class="tha" rowspan="2">% Infected</th>
+            <th class="tha" rowspan="2">% Infective</th>
+        </tr>
+        <tr>
+            <th style="padding: 5px">MOH area</th>
+            <th style="padding: 5px">PHM area</th>
+            <th style="padding: 5px">GN division</th>
+            <th class="tha" style="padding: 3px 0">No of <br> premises examined</th>
+            <th class="tha">No of positive for Mansonia</th>
+            <th class="tha">No of positive for Mansonia</th>
+            <th class="tha">% positive</th>
+            <!-- <th class="tha">No of positive for Mansonia</th>
+            <th class="tha">% positive</th> -->
+            <th class="tha">Collected</th>
+            <th class="tha">Dissected</th>
+            <th class="tha">infected</th>
+            <th class="tha">infective</th>
+        </tr>
+
+        <?php
+        print_r($dataView);
+        ?>
+    </table>
+
+</page>
