@@ -37,7 +37,7 @@
             -ms-transform: rotate(-90deg);
             -o-transform: rotate(-90deg);
             transform: rotate(-90deg);
-            width: 82px;
+            width: 81px;
             text-align: center;
         }
 

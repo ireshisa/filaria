@@ -73,10 +73,10 @@
 									<label for="exampleInputEmail1">Form List</label>
 									<select name="main_form_type" required id="main_form_type" class="form-control" onchange="getEntoFrom(this.value)">
 										<option value="">Select</option>
-										<option value="ento_01">ENTO/01</option>
-										<option value="ento_02">ENTO/02</option>
-										<option value="ento_03">ENTO/03</option>
-										<option value="ento_04">ENTO/04</option>
+										<option value="ento_01">IHC</option>
+										<option value="ento_02">GTC</option>
+										<option value="ento_03">CBNT</option>
+										<option value="ento_04">HLNC</option>
 									</select>
 								</div>
 

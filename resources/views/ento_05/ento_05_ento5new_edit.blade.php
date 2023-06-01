@@ -18,14 +18,9 @@
 
 			<!-- left column -->
 			<form method="post" action="{{url('/ento_05_new_edit') }}">
-
 				{{ csrf_field() }}
-
-
 				<div class="col-md-12">
 					@if (session()->has('message'))
-
-
 					@if (session()->has('id'))
 					<div class="alert alert-info alert-dismissible">
 						<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
@@ -34,10 +29,6 @@
 						</Center>
 					</div>
 					@endif
-
-
-
-
 
 
 					@if (session()->get('message') == true)
@@ -94,10 +85,10 @@
 									<label for="exampleInputEmail1">Form List</label>
 									<select name="main_form_type" required id="main_form_type" class="form-control" readonly>
 										<option value="">Select</option>
-										<option value="ento_01" {{ $main_form_type =='ento_01' ? 'selected':'' }}>ENTO/01</option>
-										<option value="ento_02" {{ $main_form_type =='ento_02' ? 'selected':'' }}>ENTO/02</option>
-										<option value="ento_03" {{ $main_form_type =='ento_03' ? 'selected':'' }}>ENTO/03</option>
-										<option value="ento_04" {{ $main_form_type =='ento_04' ? 'selected':'' }}>ENTO/04</option>
+										<option value="ento_01" {{ $main_form_type =='ento_01' ? 'selected':'' }}>IHC</option>
+										<option value="ento_02" {{ $main_form_type =='ento_02' ? 'selected':'' }}>GTC</option>
+										<option value="ento_03" {{ $main_form_type =='ento_03' ? 'selected':'' }}>CBNT</option>
+										<option value="ento_04" {{ $main_form_type =='ento_04' ? 'selected':'' }}>HLNC</option>
 									</select>
 								</div>
 

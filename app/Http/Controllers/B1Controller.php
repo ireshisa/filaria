@@ -119,18 +119,15 @@ class B1Controller extends Controller
                 $ento3 = $this->get_ento3_data($from, $to, $district, $species, $type);
                 $ento4 = $this->get_ento4_data($from, $to, $district, $species, $type);
 
-
                 $viewData = $viewData .  $ento1;
                 if ("Cx" == $species) {
                     $viewData = $viewData . $ento2;
                 }
                 $viewData = $viewData . $ento3;   // ento 2 data get funtion
                 $viewData = $viewData . $ento4;
-
                 if ($ento1 != "" ||   $ento2 != ""  ||   $ento3 != "" ||   $ento4 != "") {
                     $viewData = $viewData . $this->get_total_row($type);
                 }
-
 
                 if ($key == "Kalutara") {
                     $viewData = $viewData . $this->get_total_row($type, "province", "western province");
@@ -142,15 +139,10 @@ class B1Controller extends Controller
                  $viewData = $viewData . $this->get_total_row($type, "province", "North Western Province");
                 }
                  if ($key == "Non endemic") {
-                     $viewData = $viewData . $this->get_total_row($type, "province", "Sri Lanka");
+                     $viewData = $viewData . $this->get_total_row($type, "province", "Non endemic");
                  }
             }
-
             $viewData = $viewData . $this->get_total_row($type, "final");   //
-
-
-
-
 
         } else {
             $viewData = $this->get_ento1_data($from, $to, $district, $species);
@@ -160,10 +152,7 @@ class B1Controller extends Controller
             $viewData = $viewData . $this->get_ento3_data($from, $to, $district, $species);   // ento 2 data get funtion
             $viewData = $viewData . $this->get_ento4_data($from, $to, $district, $species);   // en
             $viewData = $viewData . $this->get_total_row($type);   // en
-
         }
-
-
 
         if ($export_type == 'PDF') {
             $content = ob_get_clean();
@@ -175,7 +164,6 @@ class B1Controller extends Controller
                 ["dataView" => $viewData, 'district' => $data['district'], 'from' => $data['from'], 'to' => $data['to'], 'type' => $type]
             );
             try {
-
                 $html2pdf = new HTML2PDF('L', 'A3', 'en', true, 'UTF-8', array(1, 1, 1, 1));
                 $html2pdf->pdf->SetTitle('B 1 Report');
                 $html2pdf->WriteHTML($template);
@@ -360,7 +348,7 @@ class B1Controller extends Controller
                 if ($final == "final") {
                     $viewData = $viewData .
                         '<tr>' .
-                        '<td>  Total</td>' .
+                        '<td>  Sri Lanka</td>' .
                         '<td></td>' .
                         '<td></td>' .
                         '<td></td>' .

@@ -11,7 +11,6 @@
             line-height: 18px;
             align-items: center;
             margin: auto auto;
-
         }
 
         th,
@@ -37,7 +36,7 @@
             -ms-transform: rotate(-90deg);
             -o-transform: rotate(-90deg);
             transform: rotate(-90deg);
-            width: 82px;
+            width: 80px;
             text-align: center;
         }
 
@@ -47,30 +46,15 @@
     </style>
 
 
-
-
-
-
     <div class="row" style="margin: 15px">
-
-
-
         <div class="col float-left ">
             <strong>
                 <br> <i> Mansonia species </i></strong>
             <div class=" mr-4" style="margin-left:60%;"> <strong>B1 </strong><strong class="ml-3"> Report</strong> </div>
         </div>
-
     </div>
 
-
-
-
-
-    
-
         <?php if ($district != "Non endemic") { ?>
-
             <h2 style="text-align: center; font-family:Arial; "> {{$type=='srilanka' ? '':'REGIONAL' }} ANTI FILARIASIS {{$type=='srilanka' ? 'CAMPAIGN':'UNIT' }} <br>
         <?php
         if ($type != 'srilanka') {
@@ -82,31 +66,14 @@
         ?>
 
         <?php } else { ?>
-
             <h2 style="text-align: center; font-family:Arial; ">  ANTI FILARIASIS CAMPAIGN   <br>
                 Non Endemic Survey
         <?php
-   
         ?>
-
-
         <?php } ?>
-
-
-
-
-
         <br>
 
-
-
-
-
-
-
-
         <strong> Entomological Surveillance Report </strong>
-
     </h2>
 
 
